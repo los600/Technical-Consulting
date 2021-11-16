@@ -19,5 +19,5 @@ Tools used:
 - Sole
 - Martín
 - Rubén
-- Davina
+- Davina Medina Ramírez
 - Diego
