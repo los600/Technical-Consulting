@@ -19,13 +19,14 @@ class DataUser {
 
     }
     public function all() {
-        $userList =[];
+        $usersList =[];
         foreach ($this->db->getAll()as $users){
-            array_push($userList,$users);
+            array_push($usersList,$users);
         }
-
+        
+        return $usersList;
     }
-    return $userList
+    
 
 }
 
