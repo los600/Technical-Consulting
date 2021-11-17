@@ -14,7 +14,7 @@ class DataUser {
         $this->username= $data['username'];
         $this->subject = $data ['subject'];
         $this->creationTime = $data['creationTime'];
-        $this->db =new Database
+        $this->db =new Database;
       
 
     }
