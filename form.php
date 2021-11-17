@@ -9,13 +9,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="input-group mb-3">
-     <input type="text" class="form-control" placeholder="Name" aria-label="Name">
-    </div>
-    <div class="input-group mb-3">
-     <input type="text" class="form-control" placeholder="Consult subject" aria-label="Consult subject">
-    </div>
-    <button type="button" class="btn btn-primary">SUBMIT</button>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <main>
+        <form action="form_submit.php" name="form" method="get">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="user" name="connectdata" placeholder="Name" aria-label="Name">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="subject" id="user" name="connectdata" placeholder="Consult subject" aria-label="Consult subject">
+            </div>
+            <button type="button" class="btn btn-primary" name="connectdata">SUBMIT</button>
+        </form>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
 </body>
 </html>
