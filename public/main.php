@@ -11,9 +11,9 @@
     <section class='justify-content-center'>
         <?php echo "
             <div class='alert alert-primary' role='alert'>
-            A simple primary alert—check it out!
-            </div><div class='alert alert-primary' role='alert'>
-            A simple primary alert—check it out!
+            <p class='d-inline'>User:{$_GET['user']};</p>
+            <p class='d-inline'>Subject: {$_GET['subject']};</p> 
+            <p class='d-inline'> Date time {$_GET['datetime']};</p>
             </div>
         "?>
     </section>
