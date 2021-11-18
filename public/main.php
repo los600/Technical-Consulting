@@ -13,14 +13,18 @@
     </head>
     <body>
         <section class='justify-content-center'>
-            <?php echo "
+            <?php 
+            require_once 'dataUser.php';
+            $users = (new DataUser()) -> all();
+        foreach ($users as $item) {
+            echo "
             <div class='alert alert-primary' role='alert'>
-            <p class='d-inline'>User:{$users->name};</p>
-            <p class='d-inline'>Subject: {$users->subject};</p> 
-            <p class='d-inline'> Date time {$users->creationTime};</p>
-            </div>
-            
-        "?>
+            <p class='d-inline'>User:{$item->username}</p>
+            <p class='d-inline'>Subject:{$item->subject}</p> 
+            <p class='d-inline'> Date time:{$item->creationTime}</p>
+            </div>";
+        }
+        ?>
     </section>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 

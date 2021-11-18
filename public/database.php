@@ -18,8 +18,7 @@ class Database {
    ]
     ];    
     public function getAll(){
-        return $this ->users;
+        return $this->users;
     }   
-}
-    
+} 
 ?>

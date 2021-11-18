@@ -1,5 +1,7 @@
 <?php       //prova push//
-require_once 'DataBase.php';
+
+require_once 'database.php';
+
 class DataUser {
     
     private $id;
@@ -22,17 +24,11 @@ class DataUser {
     }
     public function all() {
         $usersList =[];
-        foreach ($this->db->getAll()as $users){
-            array_push($usersList,$users);
+        foreach ($this->db->getAll() as $users){
+            array_push($usersList, new self($users));
         }
 
         return $usersList;
     }
-    
-
 }
-
-
-
-
 ?>
