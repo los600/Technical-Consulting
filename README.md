@@ -15,9 +15,9 @@ Tools used:
 
 ## Autores ✒️
 
-- Marta
+- Marta Guitart
 - Sole
 - Martín
 - Rubén
-- Davina
+- Davina Medina
 - Diego
