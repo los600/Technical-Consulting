@@ -1,21 +1,34 @@
-
-<?php
-
+<?php       //prova push//
+require_once 'DataBase.php';
 class DataUser {
-    public $id;
+    
+    private $id;
     public $username;
     public $subject;
-    private $creationTime;
+    public $creationTime;
+    private $db;
 
-    public function __Construct ($data){
+
+    public function __Construct ($data = null){
+
+        if ($data){
         $this->id = $data['id'];
         $this->username= $data['username'];
         $this->subject = $data ['subject'];
         $this->creationTime = $data['creationTime'];
-      
+        }
+        $this->db =new Database;
 
     }
+    public function all() {
+        $usersList =[];
+        foreach ($this->db->getAll()as $users){
+            array_push($usersList,$users);
+        }
 
+        return $usersList;
+    }
+    
 
 }
 
