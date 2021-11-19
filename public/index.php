@@ -19,9 +19,9 @@
         foreach ($users as $item) {
             echo "
             <div class='alert alert-primary' role='alert'>
-            <p class='d-inline'>User:{$item->username}</p>
-            <p class='d-inline'>Subject:{$item->subject}</p> 
-            <p class='d-inline'> Date time:{$item->creationTime}</p>
+            <p class='d-inline text-success'>User: {$item->username}</p>
+            <p class='d-inline text-primary'>Subject: {$item->subject}</p> 
+            <p class='d-inline text-muted'> Date time: {$item->creationTime}</p>
             </div>";
         }
         ?>
