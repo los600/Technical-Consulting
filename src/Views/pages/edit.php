@@ -14,8 +14,7 @@
     <body>
     <section class='justify-content-center'>
             <?php 
-            require_once 'dataUser.php';
-            $users = (new DataUser()) -> all();
+                        
         foreach ($users as $item) {
             echo "
             <div class='alert alert-primary' role='alert'>
