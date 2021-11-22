@@ -7,7 +7,6 @@ use  App\Controllers\CitaController;
 
 
 $controlador = new CitaController;
-
 $controlador->index();
 
 

@@ -8,6 +8,9 @@ class CitaController {
         require_once __DIR__ . "/../Views/pages/list.php";
         
     }
-    
+    function create(){
+
+    }    
 }
 
+//funcion en el cotrolador
