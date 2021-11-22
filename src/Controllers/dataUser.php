@@ -1,6 +1,5 @@
-<?php       //prova push// 2//
-//test
-// test2
+<?php       
+
 require_once 'database.php';
 
 class DataUser {
