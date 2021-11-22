@@ -1,8 +1,9 @@
 <?php       
+namespace App\Models;
 
-require_once 'database.php';
+use App\Core\Database;
 
-class DataUser {
+class Cita {
     
     private $id;
     public $username;
