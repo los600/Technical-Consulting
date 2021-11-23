@@ -9,7 +9,7 @@ $controlador = new CitaController;
 var_dump($_POST);
 
 
-$controlador = new CitaController;
+
 
 if ($uri== '/list' ){
     $controlador->index();
