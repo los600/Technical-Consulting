@@ -5,6 +5,7 @@ use  App\Controllers\CitaController;
 
 $uri= $_SERVER ["REQUEST_URI"];
 $controlador = new CitaController;
+var_dump($_POST);
 
 
 
