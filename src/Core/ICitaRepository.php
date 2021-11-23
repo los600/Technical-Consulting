@@ -3,5 +3,6 @@
 namespace App\Core;
 
 interface ICitaRepository{
-    public function getAll();
+    function getAll();
+    function save($username, $subject);
 }

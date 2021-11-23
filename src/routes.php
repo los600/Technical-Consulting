@@ -6,7 +6,11 @@ use App\Core\SQLConexion;
 
 $uri= $_SERVER ["REQUEST_URI"];
 $controlador = new CitaController;
-var_dump($_POST);
+/* var_dump($_POST); */
+
+if ($_POST){
+    $controlador->store($_POST);
+}
 
 if ($uri== '/list' || $uri == '/'){
     $controlador->index();

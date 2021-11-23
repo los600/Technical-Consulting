@@ -7,7 +7,7 @@ use App\Core\ICitaRepository;
 
 class Cita {
     
-    private $id;
+    private ?int $id = null;
     public $username;
     public $subject;
     public $creationTime;
@@ -17,11 +17,12 @@ class Cita {
     public function __Construct ($data = null){
 
         if ($data){
-        $this->id = $data['id'];
+        $this->id = isset($data['id']) ? $data['id'] : null;
         $this->username= $data['username'];
         $this->subject = $data ['subject'];
-        $this->creationTime = $data['creationTime'];
+        $this->creationTime = isset($data['creationTime']) ? $data['creationTime'] : null;
         }
+
         $this->db =new SQLCitaRepository();
 
     }
@@ -32,6 +33,9 @@ class Cita {
         }
 
         return $usersList;
+    }
+    public function save(){
+        $this->db->save($this->username, $this->subject);
     }
 }
 

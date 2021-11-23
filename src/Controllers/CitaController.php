@@ -17,6 +17,14 @@ class CitaController {
         $users = (new Cita()) -> all();
         require_once __DIR__ . "/../Views/pages/edit.php";
     }    
+    public function store($request) {
+       $citaToSave = new Cita($request);
+       $citaToSave->save();
+       $this->redirect('/');
+    }
+    private function redirect(string $url){
+        header("Location: {$url}");
+    }
 }
 
 

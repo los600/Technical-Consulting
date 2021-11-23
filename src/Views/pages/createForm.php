@@ -1,7 +1,7 @@
 <?php require_once __DIR__ . '/../layouts/default.php'; ?>
 
     <main>
-        <form action="/" name="form" method="post" id=user>
+        <form action="/Cita" name="form" method="post" id=user>
                 <div class="input-group m-3">
                     <input type="text" class="form-control" id="user"value="" name="username" placeholder="Name" aria-label="Name">
                 </div>
