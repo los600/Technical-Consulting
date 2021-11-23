@@ -8,10 +8,7 @@ $uri= $_SERVER ["REQUEST_URI"];
 $controlador = new CitaController;
 var_dump($_POST);
 
-
-
-
-if ($uri== '/list' ){
+if ($uri== '/list' || $uri == '/'){
     $controlador->index();
 }
 if ($uri== '/create'){
