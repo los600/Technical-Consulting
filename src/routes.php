@@ -8,7 +8,7 @@ $controlador = new CitaController;
 
 
 
-if ($uri== '/citas' ){
+if ($uri== '/list' ){
     $controlador->index();
 }
 if ($uri== '/create'){
