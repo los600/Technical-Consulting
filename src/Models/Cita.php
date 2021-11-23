@@ -1,7 +1,9 @@
 <?php       
 namespace App\Models;
 
-use App\Core\Database;
+use App\Core\FakeCitaRepository;
+use App\Core\SQLCitaRepository;
+use App\Core\ICitaRepository;
 
 class Cita {
     
@@ -9,7 +11,7 @@ class Cita {
     public $username;
     public $subject;
     public $creationTime;
-    private $db;
+    private ICitaRepository $db;
 
 
     public function __Construct ($data = null){
@@ -20,7 +22,7 @@ class Cita {
         $this->subject = $data ['subject'];
         $this->creationTime = $data['creationTime'];
         }
-        $this->db =new Database;
+        $this->db =new SQLCitaRepository();
 
     }
     public function all() {
@@ -32,4 +34,4 @@ class Cita {
         return $usersList;
     }
 }
-?>
+

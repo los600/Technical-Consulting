@@ -2,11 +2,11 @@
 
 namespace App;
 use  App\Controllers\CitaController;
+use App\Core\SQLConexion;
 
 $uri= $_SERVER ["REQUEST_URI"];
+
 $controlador = new CitaController;
-
-
 
 if ($uri== '/list' ){
     $controlador->index();

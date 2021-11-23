@@ -1,7 +1,8 @@
 <?php
+
 namespace App\Core;
 
-class Database {
+class FakeCitaRepository implements ICitaRepository{
     private  $users = [
     ['id'=> 1,
      'username'=> 'Rodolfo',
@@ -36,4 +37,3 @@ class Database {
         return $this->users;
     }   
 } 
-?>
