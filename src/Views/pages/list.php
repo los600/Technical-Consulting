@@ -3,15 +3,13 @@
             
         foreach ($users as $item) {
             echo "
-            <section class='justify-content-center'>
-            <div class='alert alert-primary' role='alert'>
-            <p class='d-inline text-success'>User: {$item->username}</p>
-            <p class='d-inline text-primary'>Subject: {$item->subject}</p> 
-            <p class='d-inline text-muted'> Date time: {$item->creationTime}</p>
+            <section class='m-3'>
+            <div class='shadow p-4 list-group-item-info>
+            <li class='d-inline m-3'><i class='bi bi-person-fill'></i>  {$item->username}</li>
+            <li class='d-inline text-primary m-3'><i class='bi bi-exclamation-octagon-fill'></i>  {$item->subject}</li> 
+            <li class='d-inline text-muted m-3'><i class='bi bi-clock'></i>  {$item->creationTime}</li>
             </div>
             </section>";
         }
         ?>
    
-
-

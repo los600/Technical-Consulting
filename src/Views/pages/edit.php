@@ -4,16 +4,16 @@
                         
         foreach ($users as $item) {
             echo "
-            <section class='justify-content-center'>
-            <div class='alert alert-primary' role='alert'>
-            <p class='d-inline text-success'>User: {$item->username}</p>
-            <p class='d-inline text-primary'>Subject: {$item->subject}</p> 
-            <p class='d-inline text-muted'> Date time: {$item->creationTime}</p>
-            </div> <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
-            <button type='button' class='btn btn-danger'>Delete</button>
-            <button type='button' class='btn btn-warning'>Edit</button>
-            <button type='button' class='btn btn-success'>UpDate</button>
-        </div>";
+            <section class='m-3'>
+            <div class='shadow p-4 list-group-item-info>
+            <li class='d-inline m-3'><i class='bi bi-person-fill'></i>  {$item->username}</li>
+            <li class='d-inline text-primary m-3'><i class='bi bi-exclamation-octagon-fill'></i>  {$item->subject}</li> 
+            <li class='d-inline text-muted m-3'><i class='bi bi-clock'></i>  {$item->creationTime}</li>
+            <button class='btn btn-warning'><i class='bi bi-pencil-square'></i></button>
+            <button class='btn btn-success'><i class='bi bi-arrow-clockwise'></i></button>
+            <button class='btn btn-danger'><i class='bi bi-trash-fill'></i></button>
+            </div>
+            </section>";
         }
         ?>
            
