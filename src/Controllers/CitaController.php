@@ -25,6 +25,6 @@ class CitaController {
     private function redirect(string $url){
         header("Location: {$url}");
     }
-}
+};
 
 
