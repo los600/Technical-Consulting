@@ -18,3 +18,5 @@ class SQLCitaRepository implements ICitaRepository{
        $this->conexion->query("INSERT INTO `{$this->table}` (`username`, `subject`) VALUES ('{$username}', '{$subject}')");
    }
 }
+
+
