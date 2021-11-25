@@ -1,11 +1,11 @@
 <?php
 
 namespace App;
-use  App\Controllers\CitaController;
+use  App\Controllers\PageController;
 use App\Core\SQLConexion;
 
 $uri= $_SERVER ["REQUEST_URI"];
-$controlador = new CitaController;
+$controlador = new PageController;
 /* var_dump($_POST); */
 
 if ($_POST){
@@ -21,7 +21,9 @@ if ($uri== '/create'){
 if ($uri== '/edit'){
     $controlador->edit();
 }
-
+/* if ($uri== '/editView'){
+    $controlador->editView();
+} */
 
 
 
