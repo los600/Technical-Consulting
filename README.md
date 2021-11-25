@@ -21,3 +21,37 @@ Tools used:
 - Rubén
 - Davina Medina
 - Diego
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#main#edit
+class="alert alert-secondary"
+class="alert alert-success"
+class="alert alert-danger"
+class="alert alert-warning" 
+class="alert alert-info"
+class="alert alert-dark" 
+
+
