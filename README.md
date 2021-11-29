@@ -22,6 +22,15 @@ Tools used:
 - Davina Medina
 - Diego
 
+## Arquitectura
+
+El modelo se encarga de gestionar los datos de la aplicación. Recibe información del usuario del controlador.
+
+La vista muestra la presentación del modelo en un formato particular.
+
+El controlador responde a la entrada del usuario y realiza interacciones en los objetos del modelo de datos. El controlador recibe la entrada, opcionalmente la valida y luego pasa la entrada al modelo.
+
+<img src="https://1.bp.blogspot.com/-_S_XUcv3Ucg/WaEGf_nUfrI/AAAAAAAAAJ4/Eup9g_FtgpQbk98V7JzPQErJ_Hydt41VgCLcBGAs/s1600/MVC_Architecture.png" >
 
 
 
@@ -46,12 +55,6 @@ Tools used:
 
 
 
-#main#edit
-class="alert alert-secondary"
-class="alert alert-success"
-class="alert alert-danger"
-class="alert alert-warning" 
-class="alert alert-info"
-class="alert alert-dark" 
+
 
 
