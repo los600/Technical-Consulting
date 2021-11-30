@@ -28,6 +28,13 @@ if ($_GET){
     }
 }
 
+if ($_GET){
+    $action = isset($_GET['action']) ? $_GET ['action'] : null;
+    if ($action == 'edit' && isset($_GET['id'])){
+        $controlador->edit($_GET);
+    }
+}
+
 
 
 

@@ -17,10 +17,7 @@ class PageController {
         $users = (new Cita()) -> all();
         require_once __DIR__ . "/../Views/pages/edit.php";
     }    
-    /* function editView(){
-        $users = (new Cita()) -> all();
-        require_once __DIR__ . "/../Views/pages/editView.php";
-    }     */
+
     public function store($request) {
        $citaToSave = new Cita($request);
        $citaToSave->save();
@@ -32,6 +29,11 @@ class PageController {
     public function delete($request){
         $citaToDelete = new Cita ($request);
         $citaToDelete->delete();
+        $this->redirect('/');
+    }
+    public function editUser($request){
+        $citaToEdit = new Cita ($request);
+        $citaToEdit->editUser();
         $this->redirect('/');
     }
 };
