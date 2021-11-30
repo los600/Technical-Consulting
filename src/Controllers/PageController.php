@@ -13,8 +13,8 @@ class PageController {
         $users = (new Cita()) -> all();
         require_once __DIR__ . "/../Views/pages/createForm.php";
     }   
-     function edit(){
-        $users = (new Cita()) -> all();
+     function edit($id){
+        $cita = (new Cita()) -> getById($id);
         require_once __DIR__ . "/../Views/pages/edit.php";
     }    
 
@@ -31,9 +31,5 @@ class PageController {
         $citaToDelete->delete();
         $this->redirect('/');
     }
-    public function editUser($request){
-        $citaToEdit = new Cita ($request);
-        $citaToEdit->editUser();
-        $this->redirect('/');
-    }
+  
 };

@@ -2,7 +2,6 @@
 echo"
     <main>
         
-
         <div class='container mt-5'>
             <div class='row'>
                 <div class='col-md-6 offset-md-3'>
@@ -15,20 +14,17 @@ echo"
                          </div>                
                          <div class='mb-3 input-group'>
                             <span class='input-group-text'><i class='bi bi-person-fill'></i></span>
-                            <input type='text' class='form-control' required id='user'value='' name='username' placeholder='{$cita->username}' aria-label='Name'>
+                            <input type='text' class='form-control' required id='user'value='{$cita-> username}' name='username'  aria-label='Name'>
                          </div>
-
                          <div class='mb-3 input-group'>
                              <span class='input-group-text'><i class='bi bi-exclamation-octagon-fill'></i></span>
                              <label for='Password'></label>
-                             <textarea class='form-control' type='text'  required id='user' name='subject' placeholder='Consult subject ' aria-label='Consult subject'></textarea>
+                             <textarea class='form-control' type='text'  required id='user' name='subject'  aria-label='Consult subject'></textarea>
                          </div>
-
-                    
+                         <input type='hidden' id='custId' name='custId' value='{}'> 
                          <div class='mb-4 mt-4'>
                              <button type='submit' class='btn btn-primary'>Update</button>
                          </div>
-
                          
                         
                     </form>

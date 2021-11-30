@@ -18,9 +18,7 @@ if ($uri== '/list' || $uri == '/'){
 if ($uri== '/create'){
     $controlador->create();
 }
-if ($uri== '/edit'){
-    $controlador->edit();
-}
+
 if ($_GET){
     $action = isset($_GET['action']) ? $_GET ['action'] : null;
     if ($action == 'delete' && isset($_GET['id'])){
@@ -31,7 +29,7 @@ if ($_GET){
 if ($_GET){
     $action = isset($_GET['action']) ? $_GET ['action'] : null;
     if ($action == 'edit' && isset($_GET['id'])){
-        $controlador->edit($_GET);
+        $controlador->edit($_GET['id']);
     }
 }
 

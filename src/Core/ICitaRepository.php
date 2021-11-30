@@ -2,10 +2,11 @@
 
 namespace App\Core;
 
-interface ICitaRepository{
+interface ICitaRepository
+{
     function getAll();
     function save($username, $subject);
     function delete($id);
-    function edit($id);
+    function editUser($id);
+    function getById($id);
 }
-
