@@ -21,9 +21,12 @@ if ($uri== '/create'){
 if ($uri== '/edit'){
     $controlador->edit();
 }
-/* if ($uri== '/editView'){
-    $controlador->editView();
-} */
+if ($_GET){
+    $action = isset($_GET['action']) ? $_GET ['action'] : null;
+    if ($action == 'delete' && isset($_GET['id'])){
+        $controlador->delete($_GET);
+    }
+}
 
 
 

@@ -7,7 +7,7 @@ use App\Core\ICitaRepository;
 
 class Cita {
     
-    private ?int $id = null;
+    public ? int $id = null;
     public $username;
     public $subject;
     public $creationTime;
@@ -36,6 +36,9 @@ class Cita {
     }
     public function save(){
         $this->db->save($this->username, $this->subject);
+    }
+    public function delete(){
+        $this->db->delete($this->id);
     }
 }
 

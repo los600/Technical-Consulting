@@ -10,7 +10,7 @@ require_once __DIR__ . '/../layouts/default.php';
             <li class='d-inline text-primary m-3'><i class='bi bi-exclamation-octagon-fill'></i>  {$item->subject}</li> 
             <li class='d-inline text-muted m-3'><i class='bi bi-clock'></i>  {$item->creationTime}</li>
             <a class='btn btn-warning'><i class='bi bi-pencil-square'></i></a>
-            <a class='btn btn-danger'><i class='bi bi-trash-fill'></i></a>
+            <a class='btn btn-danger' href='/?action=delete&id={$item->id}'><i class='bi bi-trash-fill'></i></a>
             </div>
             </section>";
         }

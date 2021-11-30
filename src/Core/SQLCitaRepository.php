@@ -17,6 +17,9 @@ class SQLCitaRepository implements ICitaRepository{
    function save($username, $subject){
        $this->conexion->query("INSERT INTO `{$this->table}` (`username`, `subject`) VALUES ('{$username}', '{$subject}')");
    }
+   function delete ($id){
+       $this->conexion->query("DELETE FROM `{$this->table}` WHERE `{$this->table}`.`id` = {$id} ");
+   }
 }
 
 
