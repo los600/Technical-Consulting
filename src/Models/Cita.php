@@ -40,5 +40,8 @@ class Cita {
     public function delete(){
         $this->db->delete($this->id);
     }
+    public function edit(){
+        $this->db->edit($this->username, $this->subject);
+    }
 }
 
