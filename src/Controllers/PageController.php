@@ -29,4 +29,9 @@ class PageController {
     private function redirect(string $url){
         header("Location: {$url}");
     }
+    public function delete($request){
+        $citaToDelete = new Cita ($request);
+        $citaToDelete->delete();
+        $this->redirect('/');
+    }
 };
