@@ -27,7 +27,7 @@ class SQLCitaRepository implements ICitaRepository
     }
     function edit($id)
     {
-        $this->conexion->query("UPDATE SET `{$this->table}`(`username`, `subject`) WHERE `{$this->table}`.`id` = {$id} ");
+        $this->conexion->query("UPDATE SET `{$this->table}`(`username`, `subject`) WHERE `{$this->table}`.`id`. = {$id} ");
     }
 }
 

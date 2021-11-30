@@ -1,11 +1,11 @@
 <?php
 
 namespace App;
-use  App\Controllers\PageController;
+use  App\Controllers\CitaController;
 use App\Core\SQLConexion;
 
 $uri= $_SERVER ["REQUEST_URI"];
-$controlador = new PageController;
+$controlador = new CitaController;
 /* var_dump($_POST); */
 
 if ($_POST){
