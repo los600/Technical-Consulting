@@ -18,6 +18,12 @@ class CitaController {
         require_once __DIR__ . "/../Views/pages/edit.php";
     }    
 
+public function editUser($request) {
+    $citaToUpdate = new Cita($request);
+    $citaToUpdate->editUser();
+    $this->redirect('/');
+}
+
     public function store($request) {
        $citaToSave = new Cita($request);
        $citaToSave->save();

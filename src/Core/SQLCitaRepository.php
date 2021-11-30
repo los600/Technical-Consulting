@@ -20,13 +20,14 @@ class SQLCitaRepository implements ICitaRepository{
    function delete ($id){
        $this->conexion->query("DELETE FROM `{$this->table}` WHERE `{$this->table}`.`id` = {$id} ");
    }
-   function editUser ($id){ 
-    $this->conexion->query("UPDATE SET `{$this->table}`(`username`, `subject`) WHERE `{$this->table}`.`id` = {$id} ");
+   function editUser ($id, $username, $subject){ 
+       var_dump("UPDATE `{$this->table}` SET `username` = '{$username}', `subject`='{$subject}' WHERE `id` = {$id} ");
+    $this->conexion->query("UPDATE `{$this->table}` SET `username` = '{$username}', `subject`='{$subject}' WHERE `id` = {$id} ");
     //getbyid
    } 
 
    function getById($id){
-    $query = $this->conexion->query("select `id`, `username`, `subject`, `creationTime` FROM `{$this->table}` WHERE {$id}");
+    $query = $this->conexion->query("SELECT `id`, `username`, `subject`, `creationTime` FROM `{$this->table}` WHERE `id` = {$id} ");
     $result = $query->fetch();
     var_dump($result);
 

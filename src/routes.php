@@ -7,8 +7,9 @@ use App\Core\SQLConexion;
 $uri= $_SERVER ["REQUEST_URI"];
 $controlador = new CitaController;
 /* var_dump($_POST); */
-
-if ($_POST){
+if ($uri=='/editUser' && $_POST){
+    $controlador->editUser($_POST);
+} else if ($_POST){
     $controlador->store($_POST);
 }
 
