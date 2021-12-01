@@ -6,7 +6,8 @@ echo"
             <div class='row'>
                 <div class='col-md-6 offset-md-3'>
                     
-               
+               <!-- dirige a routes con el uri editUser action='/editUser' -->  
+
                     <form action='/editUser' class='shadow p-4'  name='form' method='post' id=user>
               
                          <div class='mb-3'>
@@ -21,7 +22,7 @@ echo"
                          <div class='mb-3 input-group'>
                              <span class='input-group-text'><i class='bi bi-exclamation-octagon-fill'></i></span>
                              <label for='Password'></label>
-                             <textarea class='form-control' type='text'  required id='user' name='subject'  aria-label='Consult subject'></textarea>
+                             <textarea class='form-control' type='text'  required id='user' name='subject'  aria-label='Consult subject'>{$cita-> subject}</textarea>
                          </div>
                          <input type='hidden' id='custId' name='custId' value='{}'> 
                          <div class='mb-4 mt-4'>

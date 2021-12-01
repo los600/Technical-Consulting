@@ -21,7 +21,7 @@ class SQLCitaRepository implements ICitaRepository{
        $this->conexion->query("DELETE FROM `{$this->table}` WHERE `{$this->table}`.`id` = {$id} ");
    }
    function editUser ($id, $username, $subject){ 
-       var_dump("UPDATE `{$this->table}` SET `username` = '{$username}', `subject`='{$subject}' WHERE `id` = {$id} ");
+       //var_dump("UPDATE `{$this->table}` SET `username` = '{$username}', `subject`='{$subject}' WHERE `id` = {$id} ");
     $this->conexion->query("UPDATE `{$this->table}` SET `username` = '{$username}', `subject`='{$subject}' WHERE `id` = {$id} ");
     //getbyid
    } 
@@ -29,7 +29,7 @@ class SQLCitaRepository implements ICitaRepository{
    function getById($id){
     $query = $this->conexion->query("SELECT `id`, `username`, `subject`, `creationTime` FROM `{$this->table}` WHERE `id` = {$id} ");
     $result = $query->fetch();
-    var_dump($result);
+   
 
     return $result; 
 

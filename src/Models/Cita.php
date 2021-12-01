@@ -43,7 +43,7 @@ class Cita
     }
     public function editUser()
     {
-        var_dump("UPDATE");
+        //var_dump("UPDATE");
         $this->db->editUser($this->id, $this->username, $this->subject);
     }
     public function delete()
