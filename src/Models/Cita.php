@@ -48,7 +48,7 @@ class Cita{
     }
 
     public function update(){
-       $this->db->update($this->$username, $this->$subject, $this->$id);
+       $this->db->update($this->username, $this->subject, $this->id);
        /* var_dump(update); */
     }
 }
