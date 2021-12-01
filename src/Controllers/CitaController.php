@@ -31,8 +31,8 @@ class CitaController {
         $citaToDelete->delete();
         $this->redirect('/');
     }
-    public function update($username, $subject, $id){
-        $citaToUpdate = new Cita ($username, $subject, $id);
+    public function update($request){
+        $citaToUpdate = new Cita ($request);
         $citaToUpdate->update();
         $this->redirect('/');
     }

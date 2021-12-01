@@ -19,8 +19,8 @@ class Cita{
 
         if ($data) {
             $this->id = isset($data['id']) ? $data['id'] : null;
-            $this->username = isset($data['username']) ? $data['username'] : null;
-            $this->subject = isset($data['subject']) ? $data['subject'] : null;
+            $this->username = $data['username'];
+            $this->subject = $data['subject'];
             $this->creationTime = isset($data['creationTime']) ? $data['creationTime'] : null;
         }
 
@@ -47,8 +47,8 @@ class Cita{
         return new Cita($data);
     }
 
-    public function update($username, $subject, $id){
-        $data = $this->db->update($username, $subject, $id);
-        return new Cita ($data);
+    public function update(){
+       $this->db->update($this->$username, $this->$subject, $this->$id);
+       /* var_dump(update); */
     }
 }
