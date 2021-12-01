@@ -6,8 +6,7 @@ use App\Core\FakeCitaRepository;
 use App\Core\SQLCitaRepository;
 use App\Core\ICitaRepository;
 
-class Cita
-{
+class Cita{
 
     public ?int $id = null;
     public $username;
@@ -16,20 +15,18 @@ class Cita
     private ICitaRepository $db;
 
 
-    public function __Construct($data = null)
-    {
+    public function __Construct($data = null){
 
         if ($data) {
             $this->id = isset($data['id']) ? $data['id'] : null;
-            $this->username = $data['username'];
-            $this->subject = $data['subject'];
+            $this->username = isset($data['username']) ? $data['username'] : null;
+            $this->subject = isset($data['subject']) ? $data['subject'] : null;
             $this->creationTime = isset($data['creationTime']) ? $data['creationTime'] : null;
         }
 
         $this->db = new SQLCitaRepository();
     }
-    public function all()
-    {
+    public function all(){
         $usersList = [];
         foreach ($this->db->getAll() as $users) {
             array_push($usersList, new self($users));
@@ -37,19 +34,21 @@ class Cita
 
         return $usersList;
     }
-    public function save()
-    {
+    public function save(){
         $this->db->save($this->username, $this->subject);
     }
-    public function delete()
-    {
+
+    public function delete(){
         $this->db->delete($this->id);
     }
 
-    public function getById($id)
-    {
-        // $this->db->edit($this->username, $this->subject, $this->id);
+    public function getById($id){
         $data = $this->db->getById($id);
         return new Cita($data);
+    }
+
+    public function update($username, $subject, $id){
+        $data = $this->db->update($username, $subject, $id);
+        return new Cita ($data);
     }
 }

@@ -6,7 +6,6 @@ use App\Core\SQLConexion;
 
 $uri= $_SERVER ["REQUEST_URI"];
 $controlador = new CitaController;
-/* var_dump($_POST); */
 
 if ($_POST){
     $controlador->store($_POST);
@@ -31,6 +30,13 @@ if ($_GET){
     if ($action == 'edit' && isset($_GET['id'])){
         $controlador->edit($_GET['id']);
     }
+}
+
+    if ($_GET){
+        $action = isset($_GET['action']) ? $_GET['action'] : null;
+        if ($action == 'update' && isset($_GET['id'])){
+            $controlador->update($_GET['id']);
+        }
 }
 
 

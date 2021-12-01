@@ -10,7 +10,7 @@ class SQLCitaRepository implements ICitaRepository{
         $this->conexion = (new SQLConexion())->mysql;
     }
     function getAll(){
-        $query = $this->conexion->query("select * FROM {$this->table}");
+        $query = $this->conexion->query("SELECT * FROM {$this->table}");
         $result = $query->fetchAll();
         return $result;
    }
@@ -20,21 +20,16 @@ class SQLCitaRepository implements ICitaRepository{
    function delete ($id){
        $this->conexion->query("DELETE FROM `{$this->table}` WHERE `{$this->table}`.`id` = {$id} ");
    }
-   function editUser ($id){ 
-    $this->conexion->query("UPDATE SET `{$this->table}`(`username`, `subject`) WHERE `{$this->table}`.`id` = {$id} ");
-    //getbyid
-   } 
 
    function getById($id){
-    $query = $this->conexion->query("select `id`, `username`, `subject`, `creationTime` FROM `{$this->table}` WHERE {$id}");
+    $query = $this->conexion->query("SELECT * FROM `{$this->table}` WHERE `id` = {$id}");
     $result = $query->fetch();
-    var_dump($result);
-
     return $result; 
-
+   }
+   function update($username, $subject){
+    $this->conexion->query("UPDATE `{$this->table}` SET `username`='[$username]',`subject`='[$subject]' WHERE `id` = {$id} ");
    }
 }
-
 
 
 

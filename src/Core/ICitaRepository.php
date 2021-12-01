@@ -7,6 +7,6 @@ interface ICitaRepository
     function getAll();
     function save($username, $subject);
     function delete($id);
-    function editUser($id);
     function getById($id);
+    function update($username, $subject, $id);
 }
