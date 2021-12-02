@@ -24,7 +24,7 @@ echo"
                              <label for='Password'></label>
                              <textarea class='form-control' type='text'  required id='user' name='subject'  aria-label='Consult subject'>{$cita-> subject}</textarea>
                          </div>
-                         <input type='hidden' id='custId' name='custId' value='{}'> 
+                       
                          <div class='mb-4 mt-4'>
                              <button type='submit' class='btn btn-primary'>Update</button>
                          </div>
