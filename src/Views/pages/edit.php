@@ -9,10 +9,14 @@ echo"
                <!-- dirige a routes con el uri editUser action='/editUser' -->  
 
                     <form action='/editUser' class='shadow p-4'  name='form' method='post' id=user>
-              
-                         <div class='mb-3'>
-                            <h4>Edit Appointment</h4>  
-                         </div>                
+                         
+                         <div class='mb-3 d-flex justify-content-between'>
+                          
+                            <h4>Edit Appointment</h4>
+                                                      
+                            <a href='/list'><button type='button' class='btn-close' aria-label='Close'></button></a>  
+                         
+                          </div>                
                          <div class='mb-3 input-group'>
                             <span class='input-group-text'><i class='bi bi-person-fill'></i></span>
                             <input type='hidden' name='id' value='{$id}'>
