@@ -11,7 +11,7 @@ echo"
                     <form action='/editUser' class='shadow p-4'  name='form' method='post' id=user>
               
                          <div class='mb-3'>
-                            <h4>Editar Cita</h4>  
+                            <h4>Edit Appointment</h4>  
                          </div>                
                          <div class='mb-3 input-group'>
                             <span class='input-group-text'><i class='bi bi-person-fill'></i></span>

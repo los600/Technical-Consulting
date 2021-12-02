@@ -32,8 +32,4 @@ class FakeCitaRepository implements ICitaRepository{
     
 
    ]
-    ];    
-    public function getAll(){
-        return $this->users;
-    }   
-} 
+    
