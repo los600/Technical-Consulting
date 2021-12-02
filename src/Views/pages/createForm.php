@@ -9,8 +9,9 @@
                     
                     
                     <form action="/Cita" class="shadow p-4"  name="form" method="post" id=user>
-                        <div class="mb-3">
-                            <h4>Create Appointment</h4>
+                        <div class='mb-3 d-flex justify-content-between'>
+                           <h4>Create Appointment</h4>                                  
+                           <a href='/list'><button type='button' class='btn-close' aria-label='Close'></button></a> 
                         </div>                
                         <div class="mb-3 input-group">
                             <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
@@ -26,6 +27,7 @@
                 
                         <div class="mb-4 mt-4">
                             <button type="submit" class="btn btn-primary">Submit</button>
+                            <input type="reset" value="Clean" class='btn btn-success'>
                         </div>
 
                     

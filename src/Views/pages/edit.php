@@ -31,7 +31,9 @@ echo"
                          <input type='hidden' id='custId' name='custId' value='{}'> 
                          <div class='mb-4 mt-4'>
                              <button type='submit' class='btn btn-primary'>Update</button>
-                         </div>
+                         </div>          
+
+                        
                          
                         
                     </form>
