@@ -15,6 +15,7 @@
     <body>
 
     <?php require_once __DIR__ . '/../Components/header.php'; ?>
+    <?php require_once __DIR__ . '/../Components/footer.php'; ?>
 
 
 
