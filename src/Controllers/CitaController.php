@@ -12,17 +12,18 @@ class CitaController {
     function create(){
         $users = (new Cita()) -> all();
         require_once __DIR__ . "/../Views/pages/createForm.php";
-    }   
+    }  
+
      function edit($id){
         $cita = (new Cita()) -> getById($id);
         require_once __DIR__ . "/../Views/pages/edit.php";
     }    
 
-public function editUser($request) {
-    $citaToUpdate = new Cita($request);
-    $citaToUpdate->editUser();
-    $this->redirect('/');
-}
+    public function editUser($request) {
+        $citaToUpdate = new Cita($request);
+        $citaToUpdate->editUser();
+        $this->redirect('/');
+    }
 
     public function store($request) {
        $citaToSave = new Cita($request);
