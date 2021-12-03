@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar fixed-top navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
         <i class="bi bi-box text-white m-2"></i>
         <a class="navbar-brand" href="/list">Technical Consulting</a>
